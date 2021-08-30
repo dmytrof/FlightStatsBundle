@@ -1,7 +1,6 @@
 {
     "name": "spiicy/flightstats-bundle",
     "type": "symfony-bundle",
-	"version": "1.2.4",
     "description": "This Bundle provides a wrapper for the FlightStats API",
     "keywords": ["rest", "api", "flight", "flightstats"],
     "homepage": "http://spiicy.io",
@@ -14,22 +13,14 @@
     ],
 
     "require": {
-        "php": ">=5.4",
-        "symfony/framework-bundle": ">=2.7||~3.0||~4.0",
-        "guzzlehttp/guzzle": "^6.2"
+        "php": "^8.0",
+        "symfony/framework-bundle": "^5.3",
+        "guzzlehttp/guzzle": "^7.3"
     },
 
     "autoload": {
         "psr-0": { "Spiicy\\Bundle\\FlightStatsBundle": "" }
     },
 
-    "target-dir": "Spiicy/Bundle/FlightStatsBundle",
-
-    "minimum-stability": "dev",
-
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.1-dev"
-        }
-    }
+    "target-dir": "Spiicy/Bundle/FlightStatsBundle"
 }
