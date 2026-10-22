@@ -17,13 +17,14 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('spiicy_flight_stats');
+        $treeBuilder = new TreeBuilder('spiicy_flight_stats');
 
-        $rootNode->children()
-            ->scalarNode('app_id')->isRequired()->cannotBeEmpty()->end()
-            ->scalarNode('app_key')->isRequired()->cannotBeEmpty()->end()
-        ->end();
+        $treeBuilder
+            ->getRootNode()
+                ->children()
+                    ->scalarNode('app_id')->isRequired()->cannotBeEmpty()->end()
+                    ->scalarNode('app_key')->isRequired()->cannotBeEmpty()->end()
+            ->end();
 
         return $treeBuilder;
     }
